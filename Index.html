@@ -83,7 +83,7 @@
             <h2>Balance: £<span id="balance">0.00</span></h2>
         </div>
         <div id="cashout-section">
-            <button id="cashout-btn">Cash Out</button>
+            <button id="cashout-btn" disabled>Cash Out</button>
         </div>
     </div>
 
@@ -113,9 +113,9 @@
             balanceElement.textContent = balance.toFixed(2);  // Update balance display
             progressValueElement.textContent = balance.toFixed(2); // Update progress value
 
-            // Check if the player has reached £10 to allow cashout
+            // Check if the player has reached £5 to allow cashout
             if (balance >= 10.00) {
-                alert("Congratulations! You've reached £10.00. You can now cash out!");
+                alert("Congratulations! You've reached £5.00. You can now cash out!");
                 document.getElementById("cashout-btn").disabled = false;  // Enable cashout button
             }
         });
